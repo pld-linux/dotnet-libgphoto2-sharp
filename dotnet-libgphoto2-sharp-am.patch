@@ -1,0 +1,10 @@
+--- libgphoto2-sharp-2.3.0/configure.ac.orig	2006-12-10 22:35:28.000000000 +0100
++++ libgphoto2-sharp-2.3.0/configure.ac	2006-12-12 11:05:55.639505000 +0100
+@@ -16,6 +16,7 @@
+ 
+ 
+ AC_PROG_CC
++AM_PROG_CC_C_O
+ AC_C_CONST
+ AC_PROG_CPP
+ AC_PROG_INSTALL
