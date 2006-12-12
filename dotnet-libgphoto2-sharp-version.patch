@@ -1,0 +1,22 @@
+--- gphoto2-2.3.0/m4m/gp-check-library.m4~	2006-11-30 03:20:02.000000000 +0200
++++ gphoto2-2.3.0/m4m/gp-check-library.m4	2006-12-09 17:50:05.318105081 +0200
+@@ -171,7 +171,7 @@
+ 				_[$1]_REQ_3="regexp([$3], [\(>=\|>\|<\|<=\|=\)[ \t]*\([0-9]+\)\.\([0-9]+\)\.\([0-9]+\).*],   [\4])"
+ 				_[$1]_REQ_4="regexp([$3], [\(>=\|>\|<\|<=\|=\)[ \t]*\([0-9]+\)\.\([0-9]+\)\.\([0-9]+\)(.*)], [\5])"
+ 				# split installed version number via shell and sed
+-				_[$1]_VERSION="$("${[$1][_CONFIG_PROG]}" --version)"
++				_[$1]_VERSION="$("${[$1][_CONFIG_PROG]}" --version | awk '{print $NF}')"
+ 				_[$1]_VER_1="$(echo "${_[$1]_VERSION}" | sed 's/\([[0-9]]*\).*/\1/g')"
+ 				_[$1]_VER_2="$(echo "${_[$1]_VERSION}" | sed 's/\([[0-9]]*\)\.\([[0-9]]*\).*/\2/g')"
+ 				_[$1]_VER_3="$(echo "${_[$1]_VERSION}" | sed 's/\([[0-9]]*\)\.\([[0-9]]*\)\.\([[0-9]]*\).*/\3/g')"
+--- libgphoto2-sharp-2.3.0/configure.ac.orig	2006-12-12 11:10:51.149505000 +0100
++++ libgphoto2-sharp-2.3.0/configure.ac	2006-12-12 11:11:27.289505000 +0100
+@@ -38,7 +38,7 @@
+ 
+ 
+ dnl Check for libgphoto2
+-GP_CHECK_LIBRARY([LIBGPHOTO2], [libgphoto2], [>= 2.2.1.4])
++GP_CHECK_LIBRARY([LIBGPHOTO2], [libgphoto2], [>= 2.3.0])
+ 
+ dnl --- Check for mono and mcs
+ AC_PATH_PROG([CSC], [csc])
