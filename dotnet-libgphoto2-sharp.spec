@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.mono
 Summary:	.NET binding to libgphoto2
-Summary(pl):	Wi±zanie .NET dla libgphoto2
+Summary(pl.UTF-8):   WiÄ…zanie .NET dla libgphoto2
 Name:		dotnet-libgphoto2-sharp
 Version:	2.3.0
 Release:	1
@@ -22,20 +22,20 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 .NET binding to libgphoto2.
 
-%description -l pl
-Wi±zanie .NET dla libgphoto2.
+%description -l pl.UTF-8
+WiÄ…zanie .NET dla libgphoto2.
 
 %package devel
 Summary:	Development files for .NET binding to libgphoto2
-Summary(pl):	Pliki programistyczne wi±zani .NET dla libgphoto2
+Summary(pl.UTF-8):   Pliki programistyczne wiÄ…zani .NET dla libgphoto2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Development files for .NET binding to libgphoto2.
 
-%description devel -l pl
-Pliki programistyczne wi±zani .NET dla libgphoto2.
+%description devel -l pl.UTF-8
+Pliki programistyczne wiÄ…zani .NET dla libgphoto2.
 
 %prep
 %setup -q -n libgphoto2-sharp-%{version}
