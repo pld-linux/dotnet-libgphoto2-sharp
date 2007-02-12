@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.mono
 Summary:	.NET binding to libgphoto2
-Summary(pl.UTF-8):   Wiązanie .NET dla libgphoto2
+Summary(pl.UTF-8):	Wiązanie .NET dla libgphoto2
 Name:		dotnet-libgphoto2-sharp
 Version:	2.3.0
 Release:	1
@@ -27,7 +27,7 @@ Wiązanie .NET dla libgphoto2.
 
 %package devel
 Summary:	Development files for .NET binding to libgphoto2
-Summary(pl.UTF-8):   Pliki programistyczne wiązani .NET dla libgphoto2
+Summary(pl.UTF-8):	Pliki programistyczne wiązani .NET dla libgphoto2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
