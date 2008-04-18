@@ -3,7 +3,7 @@ Summary:	.NET binding to libgphoto2
 Summary(pl.UTF-8):	Wiązanie .NET dla libgphoto2
 Name:		dotnet-libgphoto2-sharp
 Version:	2.3.0
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/libgphoto2-sharp-%{version}.tar.bz2
@@ -48,7 +48,7 @@ Pliki programistyczne wiązani .NET dla libgphoto2.
 %{__autoconf}
 %{__automake}
 %configure
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -56,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	cslibdir=%{_prefix}/lib/mono/libgphoto2-sharp
+
+%{__sed} -i "/^Libraries/s@%{_libdir}/libgphoto2-sharp@%{_libdir}/mono/libgphoto2-sharp@" \
+	$RPM_BUILD_ROOT%{_pkgconfigdir}/libgphoto2-sharp.pc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
