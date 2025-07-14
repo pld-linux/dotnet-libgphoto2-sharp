@@ -38,8 +38,8 @@ Pliki programistyczne wiązani .NET dla libgphoto2.
 
 %prep
 %setup -q -n libgphoto2-sharp-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__libtoolize}
