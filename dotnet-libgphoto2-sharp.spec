@@ -1,8 +1,12 @@
+#
+# managed dotnet code, no native debug sources
+%undefine	_debugsource_packages
+#
 Summary:	.NET binding to libgphoto2
 Summary(pl.UTF-8):	Wiązanie .NET dla libgphoto2
 Name:		dotnet-libgphoto2-sharp
 Version:	2.3.0
-Release:	6
+Release:	7
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/gphoto/libgphoto2-sharp-%{version}.tar.bz2
